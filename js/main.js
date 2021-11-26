@@ -1,11 +1,16 @@
-const quote = document.getElementById("quotes");
+const quotes = document.getElementById("quotes");
 const author = document.getElementById("authors");
+const newQuote = document.getElementById("newQuote");
+const tweet = document.getElementById("tweetMe")
 let realData = "";
 
 const getNewQuotes = () => {
-    let rnum = Math.floor(Math.random() * 10);
-    quote.innerText = `${realData[rnum].text}`;
-    author.innerText = `${realData[rnum].author}`;
+    let rnum = Math.floor(Math.random() * 20);
+    quotesData = realData[rnum]
+    quotes.innerText = `${quotesData.text}`;
+    quotesData.author == null
+        ? (author.innerText = 'By Unknown')
+        : (author.innerText = `By ${quotesData.author}`);
 }
 
 const getQuotes = async () => {
@@ -14,8 +19,14 @@ const getQuotes = async () => {
         let data = await fetch(api);
         realData = await data.json();
         getNewQuotes();
-        console.log(realData[0].author);
     } catch (error) { }
 };
 
+const tweetNow = () => {
+    let tweetPost = `https://twitter.com/intent/tweet?text=${quotesData.text} By ${quotesData.author}`;
+    window.open(tweetPost);
+}
+
+newQuote.addEventListener("click", getNewQuotes)
+tweet.addEventListener("click", tweetNow)
 getQuotes();
