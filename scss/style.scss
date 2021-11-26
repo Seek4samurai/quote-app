@@ -34,37 +34,43 @@ body {
     background-color: #ff7675;
     border-radius: 42px;
     overflow: hidden;
-    box-shadow: 0px 0px 5px rgba(119, 10, 10, 0.5);
+    box-shadow: blue 0px 0px 0px 2px, rgb(255, 255, 255) 10px -10px 0px -3px, rgb(31, 193, 27) 10px -10px,
+        rgb(255, 255, 255) 20px -20px 0px -3px, rgb(255, 217, 19) 20px -20px, rgb(255, 255, 255) 30px -30px 0px -3px,
+        rgb(255, 156, 85) 30px -30px, rgb(255, 255, 255) 40px -40px 0px -3px, rgb(255, 85, 85) 40px -40px;
     .buttons {
         position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         bottom: 0;
         right: 50%;
         left: 50%;
         transform: translate(-50%, 0%);
-        font-size: 1rem;
         font-weight: 400;
-        color: #ffe7f0;
         flex-direction: row;
         width: 100%;
+        height: 5vh;
         text-align: center;
         background-color: #ff3300;
         button {
-            @extend .buttons;
             @include buttonprop;
-        }
-        .fa-quote-right {
-            size: 3x;
         }
     }
     .content {
-        // height: 0px;
-        padding: 0, 10px;
+        padding: 5px 12px;
         font-size: 4rem;
-        font-weight: 200;
+        font-weight: 100;
         color: #ffe7f0;
         flex-direction: row;
         #authors {
             float: right;
         }
     }
+}
+
+.fa-quote-left {
+    color: #ffe7f0;
+}
+.fa-quote-right {
+    color: #ffe7f0;
 }
