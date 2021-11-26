@@ -5,7 +5,7 @@ const tweet = document.getElementById("tweetMe")
 let realData = "";
 
 const getNewQuotes = () => {
-    let rnum = Math.floor(Math.random() * 20);
+    let rnum = Math.floor(Math.random() * 1600);
     quotesData = realData[rnum]
     quotes.innerText = `${quotesData.text}`;
     quotesData.author == null
@@ -30,3 +30,12 @@ const tweetNow = () => {
 newQuote.addEventListener("click", getNewQuotes)
 tweet.addEventListener("click", tweetNow)
 getQuotes();
+
+function copyClip() {
+    /* Get the text field */
+    const txt = document.getElementById("quotes");
+    const copiedtxt = txt.innerText
+    var copyText = copiedtxt;
+
+    navigator.clipboard.writeText(copiedtxt);
+}

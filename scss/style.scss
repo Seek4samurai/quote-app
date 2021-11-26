@@ -74,3 +74,19 @@ body {
 .fa-quote-right {
     color: #ffe7f0;
 }
+
+.copyTo {
+    position: absolute;
+    bottom: 10vh;
+    right: 10vw;
+    padding: 5px;
+    @include buttonprop;
+}
+
+.tooltiptext {
+    position: absolute;
+    bottom: 16vh;
+    right: 10vw;
+    font-size: 1rem;
+    // padding: 5px;
+}
