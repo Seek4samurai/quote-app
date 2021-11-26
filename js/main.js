@@ -27,15 +27,16 @@ const tweetNow = () => {
     window.open(tweetPost);
 }
 
-newQuote.addEventListener("click", getNewQuotes)
-tweet.addEventListener("click", tweetNow)
+newQuote.addEventListener("click", getNewQuotes);
+tweet.addEventListener("click", tweetNow);
 getQuotes();
 
 function copyClip() {
     /* Get the text field */
     const txt = document.getElementById("quotes");
-    const copiedtxt = txt.innerText
+    const copiedtxt = txt.innerText;
     var copyText = copiedtxt;
 
     navigator.clipboard.writeText(copiedtxt);
+    alert("Copied!")
 }

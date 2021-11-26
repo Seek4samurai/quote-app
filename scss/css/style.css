@@ -127,10 +127,15 @@ body {
   cursor: pointer;
 }
 
-.tooltiptext {
+.toolbox {
+  visibility: hidden;
   position: absolute;
   bottom: 16vh;
   right: 10vw;
   font-size: 1rem;
+  background-color: #a5a5a5;
+  border: 10px solid;
+  border-color: #a5a5a5;
+  border-radius: 10px;
 }
 /*# sourceMappingURL=style.css.map */

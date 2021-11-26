@@ -83,10 +83,14 @@ body {
     @include buttonprop;
 }
 
-.tooltiptext {
+.toolbox {
+    visibility: hidden;
     position: absolute;
     bottom: 16vh;
     right: 10vw;
     font-size: 1rem;
-    // padding: 5px;
+    background-color: rgb(165, 165, 165);
+    border: 10px solid;
+    border-color: rgb(165, 165, 165);
+    border-radius: 10px;
 }
